@@ -1,5 +1,5 @@
 const fs = require("fs");
-const input = fs.readFileSync('JavaScript/4949/input.txt').toString().trim().split("\n");
+const input = fs.readFileSync('/dev/stdin').toString().trim().split("\n");
 
 console.log(solution(input));
 
@@ -18,7 +18,7 @@ function solution(input) {
           stack[stack.length-1] === "(" ? stack.pop() : isBoolean = false;
         }
       }
-      isBoolean ? result.push("yes") : result.push("no"); 
+      stack.length > 0 || !isBoolean ? result.push("no") : result.push("yes"); 
     } 
   });
 
