@@ -1,7 +1,10 @@
+let fs = require("fs");
+let input = fs.readFileSync("./dev/stdin").toString().trim().split("\n");
+solution(input);
+
 function solution(input) {
-  const str = input.split("\n");
-  const n = parseInt(str[0]);
-  const room = str[1].split("").map(Number);
+  const n = parseInt(input[0]);
+  const room = input[1].split("").map(Number);
 
   let coffee = 0;
   let awake = 0;
@@ -17,10 +20,5 @@ function solution(input) {
       }
     }
   }
-  return awake;
+  console.log(awake);
 }
-
-const input = `10
-0100010100`;
-
-console.log(solution(input));
