@@ -1,24 +1,20 @@
 let fs = require("fs");
-let input = fs.readFileSync("./dev/stdin").toString().split(" ").map(Number);
+let input = fs.readFileSync("./dev/stdin").toString().split("\n");
 
 console.log(soluction(input));
 
 function soluction(input) {
-  let hour = input[0];
-  let minute = input[1];
-  let result = [];
+  let hour = parseInt(input[0].split(" ")[0]);
+  let minute = parseInt(input[0].split(" ")[1]);
 
   if (minute < 45) {
-    if (hour !== 0) {
-      result.push(hour - 1);
-    } else {
-      result.push(23);
-    }
-    result.push(60 - (45 - minute));
+    //분이 45분 미만이라면
+    hour -= 1;
+    minute += 15;
+    if (hour < 0) hour = 23;
   } else {
-    result.push(hour);
-    result.push(minute - 45);
+    minute -= 45;
   }
 
-  return result.join(" ");
+  return hour + " " + minute;
 }
