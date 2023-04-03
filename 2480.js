@@ -8,7 +8,7 @@ function solution(input) {
   let dice2 = input[1];
   let dice3 = input[2];
 
-  if (dice1 === dice2 && dice1 === dice3 && dice2 === dice3) {
+  if (dice1 === dice2 && dice2 === dice3) {
     return 10000 + dice1 * 1000;
   } else if (dice1 === dice2 || dice1 === dice3 || dice2 === dice3) {
     if (dice1 === dice2) {
