@@ -4,12 +4,12 @@ function solution(s) {
     
     word.forEach(el => {
         let newWord = '';
-        let trimEl = el.toString().trim();
-        for (let i = 0; i < trimEl.length; i++) {
+        
+        for (let i = 0; i < el.length; i++) {
             if (i % 2 === 0) {
-                newWord += trimEl[i].toUpperCase();
+                newWord += el[i].toUpperCase();
             } else {
-                newWord += trimEl[i].toLowerCase();
+                newWord += el[i].toLowerCase();
             }
         }
         result.push(newWord);
