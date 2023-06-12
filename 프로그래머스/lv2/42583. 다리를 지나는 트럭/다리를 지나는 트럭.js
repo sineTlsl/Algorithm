@@ -1,5 +1,5 @@
 function solution(bridge_length, weight, truck_weights) {
-	// 다리를 건너는 트럭의 무게와 위피를 저장.
+	// 다리를 건너는 트럭의 무게와 위치를 저장.
 	let bridge = [];
 	let total_weight = 0;
 	let time = 0;
@@ -28,6 +28,5 @@ function solution(bridge_length, weight, truck_weights) {
 			total_weight += truck_weight;
 		}
 	}
-    
     return time;
 }
