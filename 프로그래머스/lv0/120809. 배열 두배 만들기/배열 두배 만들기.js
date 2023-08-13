@@ -1,3 +1,3 @@
 function solution(numbers) {
-    return numbers.map(number => number * 2);
+    return numbers.map(n => n * 2);
 }
