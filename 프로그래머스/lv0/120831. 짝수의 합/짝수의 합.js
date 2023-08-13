@@ -1,11 +1,9 @@
 function solution(n) {
-    let result = 0;
+    let numSum = 0;
     
-    for (let i = 1; i <= n; i++) {
-        if (i % 2 === 0) {
-            result += i;
-        }
+    for (let i = 2; i <= n; i += 2) {
+        numSum += i;
     }
-    return result;
-
+    
+    return numSum;
 }
