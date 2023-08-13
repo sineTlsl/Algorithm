@@ -6,6 +6,6 @@ function solution(angle) {
     } else if (90 < angle && angle < 180) {
         return 3;
     } else if (angle === 180) {
-        return 4;
+        return 4
     }
 }
