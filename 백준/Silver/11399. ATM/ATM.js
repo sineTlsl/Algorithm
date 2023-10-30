@@ -3,15 +3,16 @@ const file = process.platform === 'linux' ? './dev/stdin' : './input.txt';
 const input = fs.readFileSync(file).toString().split('\n');
 
 const n = Number(input[0]);
-const people = input[1].split(' ').map(Number).sort((a, b) => a - b);
-const time = [];
+let people = input[1].split(' ').map(Number);
+
+people = people.sort((a, b) => a - b);
+
+let result = 0;
+let summary = 0;
 
 people.forEach((person) => {
-  if (time.length !== 0) {
-    time.push(time[time.length - 1] + person);
-  } else {
-    time.push(person);
-  }
+  summary += person;
+  result += summary;
 });
 
-console.log(time.reduce((a, b) => a + b));
+console.log(result);
