@@ -1,10 +1,10 @@
-# [unrated] 대소문자 바꿔서 출력하기 - 181949 
+# [level unrated] 대소문자 바꿔서 출력하기 - 181949 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181949) 
 
 ### 성능 요약
 
-메모리: 32.4 MB, 시간: 72.82 ms
+메모리: 32.3 MB, 시간: 46.57 ms
 
 ### 구분
 
@@ -12,7 +12,11 @@
 
 ### 채점결과
 
-Empty
+정확성: 100.0<br/>합계: 100.0 / 100.0
+
+### 제출 일자
+
+2023년 12월 5일 19:36:41
 
 ### 문제 설명
 
@@ -23,7 +27,7 @@ Empty
 <h5>제한사항</h5>
 
 <ul>
-<li>1 ≤ <code>str</code>의 길이 ≤ 10
+<li>1 ≤ <code>str</code>의 길이 ≤ 20
 
 <ul>
 <li><code>str</code>은 알파벳으로 이루어진 문자열입니다.</li>
@@ -40,5 +44,9 @@ Empty
 <p>출력 #1</p>
 <div class="highlight"><pre class="codehilite"><code>AbCdEfG
 </code></pre></div>
+<hr>
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+<p>※2023년 05월 03일 제한사항이 수정되었습니다.</p>
+
+
+> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
