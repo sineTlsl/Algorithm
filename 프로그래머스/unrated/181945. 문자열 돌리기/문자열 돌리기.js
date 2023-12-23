@@ -10,8 +10,7 @@ rl.on('line', function (line) {
     input = [line];
 }).on('close',function(){
     str = input[0];
-    
-    for (let el of str) {
-        console.log(el);
+    for (const c of str) {
+        console.log(c);
     }
 });
