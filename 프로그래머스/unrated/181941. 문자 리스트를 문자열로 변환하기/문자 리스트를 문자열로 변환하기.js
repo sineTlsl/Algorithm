@@ -1,9 +1,9 @@
 function solution(arr) {
-    let answer = '';
+    let result = '';
     
     arr.forEach(el => {
-        answer += el;
-    })
+        result += el;
+    });
     
-    return answer;
+    return result;
 }
