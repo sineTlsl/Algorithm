@@ -13,40 +13,14 @@ function solution(friends, gifts) {
     // 리턴: 다음달에 가장 많은 선물을 받는 친구가 받을 선물의 수
     
     let result = 0;
-    const name = {};
-    
-    // 1. 이름에 따라 인덱스로 저장
-    for (let i = 0; i < friends.length; i++) {
-        name[friends[i]] = i;
-    }
-    
-    // 2. 선물 지수 배열 및 선물[준 사람, 받은 사람] 0으로 초기화
-    const giftCountArr = new Array(friends.length).fill(0);
-    const giftsArr = new Array(friends.length).fill(0).map(() => new Array(friends.length).fill(0));
-    
-    // 3. 선물 주고받은 현황 저장
-    gifts.forEach(gift => {
-        const [a, b] = gift.split(' ');
-        giftsArr[name[a]][name[b]]++;
-        giftCountArr[name[a]]++;
-        giftCountArr[name[b]]--;
+    const obj = [];
+    const giftCnt = [];
+
+    friends.forEach(friend => {
+        obj[friend] = 0;
     });
     
-    // 4. 조건
-    for (let i = 0; i < giftCountArr.length; i++) {
-        let cnt = 0;
-        
-        for (let j = 0; j < giftCountArr.length; j++) {
-            if (i === j) continue;
-            
-            if (giftsArr[j][i] < giftsArr[i][j] || 
-                (giftsArr[j][i] === giftsArr[i][j] && 
-                 giftCountArr[i] > giftCountArr[j]))  {
-                cnt++;
-            }
-        }
-        if (cnt > result) result = cnt;
-    }
-    
+    console.log(obj);
+
     return result;
 }

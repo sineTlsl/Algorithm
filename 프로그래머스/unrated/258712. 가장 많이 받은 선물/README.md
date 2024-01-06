@@ -1,6 +1,6 @@
 # [level unrated] 가장 많이 받은 선물 - 258712 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/258712?language=javascript) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/258712) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 6일 21:10:52
+2024년 1월 6일 21:11:36
 
 ### 문제 설명
 
