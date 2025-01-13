@@ -1,18 +1,12 @@
 function solution(s){
-    let strP = 0;
-    let strY = 0;
+    let pCnt = 0;
+    let yCnt = 0;
+    let strArr = s.toLowerCase();
     
-    for (let el of s) {
-        const upperStr = el.toUpperCase();
-        
-        if (upperStr === "P") {
-            strP += 1;
-        } else if (upperStr === "Y") {
-            strY += 1;
-        }
-    }
-    
-    if (strP === 0 && strY === 0) return true;
-    else if (strP === strY) return true;
-    else return false;
+    [...strArr].forEach(str => {
+        if ('p' === str) pCnt++;
+        else if ('y' === str) yCnt++;
+    });
+     
+    return pCnt === yCnt || (pCnt === 0 && yCnt === 0) ? true : false;
 }
